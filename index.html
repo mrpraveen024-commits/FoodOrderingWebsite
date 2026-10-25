@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie - Food Ordering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍔 Foodie</h1>
+    <input id="search" type="text" placeholder="Search food...">
+    <button id="cart-button">🛒 Cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <section class="hero">
+    <h2>Delicious Food, Delivered Fast!</h2>
+    <p>Order your favourite food from Foodie.</p>
+  </section>
+
+  <main>
+    <h2>Our Menu</h2>
+    <div id="food-list" class="food-list"></div>
+
+    <section id="cart-section">
+      <h2>Your Cart</h2>
+      <div id="cart-items">Your cart is empty.</div>
+      <h3>Total: ₹<span id="total">0</span></h3>
+      <button id="checkout">Place Order</button>
+      <p id="message"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
