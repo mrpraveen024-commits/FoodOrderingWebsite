@@ -11,6 +11,15 @@
   <header>
     <h1>🍔 Foodie</h1>
     <input id="search" type="text" placeholder="Search food...">
+   
+<div class="categories">
+  <button class="active" onclick="filterFoods('All')">All Foods</button>
+  <button onclick="filterFoods('Pizza')">Pizza</button>
+  <button onclick="filterFoods('Burger')">Burger</button>
+  <button onclick="filterFoods('Biryani')">Biryani</button>
+  <button onclick="filterFoods('Dosa')">Dosa</button>
+</div>
+
     <button id="cart-button">🛒 Cart (<span id="cart-count">0</span>)</button>
   </header>
 
@@ -27,11 +36,53 @@
       <h2>Your Cart</h2>
       <div id="cart-items">Your cart is empty.</div>
       <h3>Total: ₹<span id="total">0</span></h3>
+      <p>Delivery Fee: ₹<span id="delivery-fee">30</span></p>
+<p>Final Total: ₹<span id="final-total">0</span></p>
       <button id="checkout">Place Order</button>
+
+<div id="checkout-form">
+  <h3>Delivery Details</h3>
+
+  <label for="customer-name">Your Name</label>
+  <input type="text" id="customer-name" placeholder="Enter your name">
+
+  <label for="customer-phone">Phone Number</label>
+  <input type="tel" id="customer-phone" placeholder="Enter your phone number">
+
+  <label for="customer-address">Delivery Address</label>
+  <textarea id="customer-address" placeholder="Enter your full address"></textarea>
+
+  <button id="place-order">Place Order</button>
+</div>
+
       <p id="message"></p>
     </section>
   </main>
 
-  <script src="script.js"></script>
+
+<footer class="site-footer">
+  <h3>Foodie</h3>
+  <p>Delicious food, delivered to your doorstep.</p>
+  <p>Made with HTML, CSS and JavaScript.</p>
+  <p class="copyright">
+    &copy; 2026 Foodie. All rights reserved.
+  </p>
+</footer>
+
+
+
+<section id="order-history-section">
+  <h2>My Order History</h2>
+
+  <button id="clear-history">
+    Clear Order History
+  </button>
+
+  <div id="order-history">
+    No previous orders yet.
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
